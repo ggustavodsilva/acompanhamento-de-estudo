@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/semana", "destination": "/index.html" },
+    { "source": "/calendario", "destination": "/index.html" },
+    { "source": "/dia/:date", "destination": "/index.html" }
+  ]
+}

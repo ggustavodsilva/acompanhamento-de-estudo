@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#183f35" />
+    <meta name="description" content="Acompanhamento de estudos de Tori, Misthios e Gaziim." />
+    <title>Togazzmis Study</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section id="setup-screen" class="center-screen" hidden>
+      <article class="notice-card">
+        <span class="brand-mark" aria-hidden="true">⌁</span>
+        <p class="eyebrow">Configuração necessária</p>
+        <h1>Conecte este site ao Supabase</h1>
+        <p>Preencha a URL e a chave publicável em <code>config.js</code>. O restante do site já está pronto.</p>
+      </article>
+    </section>
+
+    <section id="login-screen" class="login-screen" hidden>
+      <div class="login-shell">
+        <aside class="login-story">
+          <div class="brand brand-on-dark"><span class="brand-mark">⌁</span><span>Togazzmis Study</span></div>
+          <div class="story-copy">
+            <span class="story-pill">✦ Um passo por dia</span>
+            <h1>Estudar fica mais leve quando o progresso fica visível.</h1>
+            <p>Registrem exercícios, acompanhem a semana e celebrem a constância do grupo.</p>
+          </div>
+          <p class="group-names">Tori · Misthios · Gaziim</p>
+        </aside>
+
+        <main class="login-form-wrap">
+          <div class="mobile-brand brand"><span class="brand-mark">⌁</span><span>Togazzmis Study</span></div>
+          <form id="login-form" class="login-form">
+            <p class="eyebrow">Bem-vindos de volta</p>
+            <h2>Quem vai estudar hoje?</h2>
+            <p class="supporting-copy">Escolha seu perfil para entrar no espaço do grupo.</p>
+            <label>Usuário
+              <select id="login-user" name="user">
+                <option value="Tori">Tori</option>
+                <option value="Misthios">Misthios</option>
+                <option value="Gaziim">Gaziim</option>
+              </select>
+            </label>
+            <label>Senha
+              <input id="login-password" name="password" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Digite sua senha" required />
+            </label>
+            <p id="login-error" class="form-error" role="alert" hidden></p>
+            <button id="login-button" class="button button-primary button-large" type="submit">Entrar</button>
+            <button id="guest-button" class="button button-secondary button-large guest-button" type="button">Entrar como convidado</button>
+            <p class="form-footnote">Convidados podem apenas visualizar os registros.</p>
+          </form>
+        </main>
+      </div>
+    </section>
+
+    <section id="app-screen" hidden>
+      <header class="app-header">
+        <div class="header-inner">
+          <a class="brand route-link" href="/" data-route="/"><span class="brand-mark">⌁</span><span class="brand-name">Togazzmis Study</span></a>
+          <nav class="desktop-nav" aria-label="Navegação principal">
+            <a href="/" data-route="/" data-view-link="today">☀ Hoje</a>
+            <a href="/semana" data-route="/semana" data-view-link="week">◷ Essa semana</a>
+            <a href="/calendario" data-route="/calendario" data-view-link="calendar">▦ Calendário</a>
+          </nav>
+          <div class="account-box"><span id="account-avatar" class="avatar"></span><strong id="account-name"></strong><button id="logout-button" class="icon-button" type="button" aria-label="Sair" title="Sair">↪</button></div>
+        </div>
+      </header>
+
+      <main id="main-content" class="main-content" tabindex="-1"></main>
+
+      <nav class="mobile-nav" aria-label="Navegação principal">
+        <a href="/" data-route="/" data-view-link="today"><span>☀</span>Hoje</a>
+        <a href="/semana" data-route="/semana" data-view-link="week"><span>◷</span>Semana</a>
+        <a href="/calendario" data-route="/calendario" data-view-link="calendar"><span>▦</span>Calendário</a>
+      </nav>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

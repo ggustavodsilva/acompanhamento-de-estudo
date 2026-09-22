@@ -2,8 +2,8 @@ import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "/config.js";
 
 const USERS = {
   Tori: { email: "tori@togazzmis.app", initials: "TO", avatar: "avatar-tori", dot: "dot-tori" },
-  Misthios: { email: "misthios@togazzmis.app", initials: "MI", avatar: "avatar-misthios", dot: "dot-misthios" },
-  Gaziim: { email: "gaziim@togazzmis.app", initials: "GA", avatar: "avatar-gaziim", dot: "dot-gaziim" },
+  Misthios: { email: "misthios@togazzmis.app", initials: "MIS", avatar: "avatar-misthios", dot: "dot-misthios" },
+  Gaziim: { email: "gaziim@togazzmis.app", initials: "GAZZ", avatar: "avatar-gaziim", dot: "dot-gaziim" },
 };
 
 const USER_NAMES = Object.keys(USERS);

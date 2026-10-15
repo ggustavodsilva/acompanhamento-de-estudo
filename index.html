@@ -28,7 +28,7 @@
             <h1>Estudar fica mais leve quando o progresso fica visível.</h1>
             <p>Registrem exercícios, acompanhem a semana e celebrem a constância do grupo.</p>
           </div>
-          <p class="group-names">Tori · Misthios · Gaziim</p>
+          <p class="group-names">Tori · Gaziim · Misthios</p>
         </aside>
 
         <main class="login-form-wrap">
@@ -40,8 +40,8 @@
             <label>Usuário
               <select id="login-user" name="user">
                 <option value="Tori">Tori</option>
-                <option value="Misthios">Misthios</option>
                 <option value="Gaziim">Gaziim</option>
+                <option value="Misthios">Misthios</option>
               </select>
             </label>
             <label>Senha
@@ -59,13 +59,13 @@
     <section id="app-screen" hidden>
       <header class="app-header">
         <div class="header-inner">
-          <a class="brand route-link" href="/" data-route="/"><span class="brand-mark">⌁</span><span class="brand-name">Togazzmis Study</span></a>
+          <a class="brand route-link" href="/" data-route="/"><span class="brand-mark brand-mark-favicon"><img src="/favicon.svg" alt="" /></span><span class="brand-name">Togazzmis Study</span></a>
           <nav class="desktop-nav" aria-label="Navegação principal">
             <a href="/" data-route="/" data-view-link="today">☀ Hoje</a>
             <a href="/semana" data-route="/semana" data-view-link="week">◷ Essa semana</a>
             <a href="/calendario" data-route="/calendario" data-view-link="calendar">▦ Calendário</a>
           </nav>
-          <div class="account-box"><span id="account-avatar" class="avatar"></span><strong id="account-name"></strong><button id="logout-button" class="icon-button" type="button" aria-label="Sair" title="Sair">↪</button></div>
+          <div class="account-box"><button id="profile-button" class="account-profile" type="button" aria-label="Abrir perfil"><span id="account-avatar" class="avatar"></span><strong id="account-name"></strong></button><button id="logout-button" class="icon-button" type="button" aria-label="Sair" title="Sair">↪</button></div>
         </div>
       </header>
 
@@ -77,6 +77,13 @@
         <a href="/calendario" data-route="/calendario" data-view-link="calendar"><span>▦</span>Calendário</a>
       </nav>
     </section>
+
+    <dialog id="profile-modal" class="profile-modal" aria-labelledby="profile-title">
+      <div class="profile-modal-shell">
+        <button id="profile-close" class="modal-close" type="button" aria-label="Fechar perfil">×</button>
+        <div id="profile-content"></div>
+      </div>
+    </dialog>
 
     <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
     <script type="module" src="/app.js"></script>

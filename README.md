@@ -8,6 +8,8 @@ Cada pessoa pode registrar exercícios e observações para o dia atual ou dias 
 
 - Login para usuários já preestabelecidos. Além de ter um acesso para convidados visualizar.
 - Visões de "Hoje", "Essa semana" e "Calendário".
+- Calendário com totais da equipe e de cada integrante, além de sequência diária de estudos visível para o grupo.
+- Perfil com foto personalizada e estatísticas por matéria no histórico completo e por mês.
 - Possibilidade de visulizar e editar dados de dias antigos acessados pelo calendário.
 - Registrar exercícios de matérias da faculdade (inicialmente, Pré-Cálculo, Cálculo e Matemática Discreta), com observações opcionais.
 - Datas futuras visíveis, mas bloqueadas para edição.
